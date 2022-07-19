@@ -1,0 +1,156 @@
+/*Wrote custom css properties, this puts all of the controls to the design of
+the webapge at the top making it easy to edit designs*/
+:root{
+  --primary-clr: rgb(254,251,234);
+  --secondary-clr: rgb(83, 130, 104);
+  --secondary-clr-dark: rgb(43, 69, 55);
+  --tertiary-clr: white;
+
+  --ff-primary: Georgia, Times, "Times New Roman", serif;
+  --ff-secondary: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+
+  --fs-normal: 16px;
+  --fs-med: 24px;
+  --fs-large: 32px;
+
+  --fw-normal: 400;
+  --fw-med: 600;
+  --fw-bold: 800;
+
+  --primary-txt-clr: black;
+  --secondary-txt-clr: grey;
+
+  --spacer: .75rem;
+  --spacer-med: calc(var(--spacer) * 1.5);
+  --spacer-large: calc(var(--spacer) * 2);
+
+  --gap: .75rem;
+  --gap-med: calc(var(--gap) * 1.5);
+  --gap-large: calc(var(--gap) * 2);
+
+  --br: 10px;
+}
+
+/*resets margin & padding of all elements*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*wrote utility classes, this makes the code more efficient */
+.flex{
+  display: flex;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+/*styled the product preview card component*/
+body{
+  font-family: var(--ff-primary);
+}
+
+p{
+  line-height: 1.4;
+  font-size: var(--fs-normal);
+}
+
+.product-section{
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-clr);
+}
+
+.product-container{
+  margin: var(--spacer);
+  width: 35rem;
+  border-radius: var(--br);
+  overflow: hidden;
+}
+
+.product-container>*{
+  flex-basis: 100%;
+  padding: var(--spacer-med);
+}
+
+.img{
+  background-image: url(../img/image-product-desktop.jpg);
+  background-size: cover;
+  min-height: 12rem;
+}
+
+.content{
+  flex-direction: column;
+  gap: var(--gap-med);
+  background-color: var(--tertiary-clr);
+}
+
+.product-category{
+  letter-spacing: 4px;
+}
+
+.product-category, .content-desc{
+  color: var(--secondary-txt-clr);
+  font-family: var(--ff-secondary);
+}
+
+h1, .discounted-price{
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.price{
+  align-items: center;
+  gap: var(--gap-med);
+}
+
+.discounted-price{
+  color: var(--secondary-clr);
+}
+
+.selling-price{
+  text-decoration: line-through;
+  color: var(--secondary-txt-clr);
+}
+
+.btn{
+  padding: var(--spacer);
+  background-color: var(--secondary-clr);
+  border: none;
+  border-radius: var(--br);
+  color: var(--tertiary-clr);
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.btn:hover{
+  background-color: var(--secondary-clr-dark);
+  cursor: pointer;
+}
+
+.btn img{
+  height: min-content;
+}
+
+.btn p{
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-med);
+  font-size: calc(var(--fs-normal) / 1.1);
+}
+
+@media (max-width:30rem) {
+  .product-container{
+    flex-direction: column;
+  }
+
+  .img{
+    background-position: 0% 30%;
+  }
+}
