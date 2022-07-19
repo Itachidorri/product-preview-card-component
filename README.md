@@ -19,7 +19,7 @@ This is a solution to the [Product preview component challenge on Frontend Mento
 ## Overview
 
 This goal of this project is to develop a simple webpage having a Product preview card component and styling it using whatever I've learned so far in
-my front-end web development journey.
+my front-end web development journey. It is also to provide useful resources that I found to be helpful during my learning journey for fellow newbie learners. 
 
 
 ### Screenshot
