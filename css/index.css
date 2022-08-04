@@ -139,7 +139,7 @@ h1, .discounted-price{
   height: min-content;
 }
 
-.btn p{
+.btn-txt{
   font-family: var(--ff-secondary);
   font-weight: var(--fw-med);
   font-size: calc(var(--fs-normal) / 1.1);
